@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ItemType>ValaProject</ItemType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{87780E08-79D9-4733-AB40-7EB0E87807CA}</ProjectGuid>
+    <Packages>
+      <Packages>
+        <ProjectPackage file="/usr/share/vala/vapi/glib-2.0.vapi" name="glib-2.0" IsProject="false" />
+        <ProjectPackage file="/usr/share/vala-0.10/vapi/bullet.vapi" name="bullet" IsProject="false" />
+        <ProjectPackage file="/usr/share/vala-0.10/vapi/gtk+-2.0.vapi" name="gtk+-2.0" IsProject="false" />
+        <ProjectPackage file="/usr/share/vala-0.10/vapi/gdk-pixbuf-2.0.vapi" name="gdk-pixbuf-2.0" IsProject="false" />
+        <ProjectPackage file="/usr/share/vala-0.10/vapi/gl.vapi" name="gl" IsProject="false" />
+        <ProjectPackage file="/usr/share/vala-0.10/vapi/glu.vapi" name="glu" IsProject="false" />
+        <ProjectPackage file="/usr/share/vala-0.10/vapi/glut.vapi" name="glut" IsProject="false" />
+        <ProjectPackage file="/usr/share/vala-0.10/vapi/glx.vapi" name="glx" IsProject="false" />
+        <ProjectPackage file="/usr/share/vala-0.10/vapi/gtkglext-1.0.vapi" name="gtkglext-1.0" IsProject="false" />
+        <ProjectPackage file="/usr/share/vala-0.10/vapi/gdk-x11-2.0.vapi" name="gdk-x11-2.0" IsProject="false" />
+        <ProjectPackage file="/usr/share/vala-0.10/vapi/libglfw.vapi" name="libglfw" IsProject="false" />
+        <ProjectPackage file="/usr/share/vala-0.10/vapi/sdl.vapi" name="sdl" IsProject="false" />
+        <ProjectPackage file="/usr/share/vala-0.10/vapi/sdl-gfx.vapi" name="sdl-gfx" IsProject="false" />
+      </Packages>
+    </Packages>
+    <compiler>
+      <compiler />
+    </compiler>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug</OutputPath>
+    <CodeGeneration>
+      <CodeGeneration WarningLevel="Normal" WarningsAsErrors="false" OptimizationLevel="0" ExtraCompilerArguments="-X -lSDL_gfx -X -lglut" DefineSymbols="DEBUG MONODEVELOP" EnableMultithreading="false" ctype="ValaCompilationParameters" />
+    </CodeGeneration>
+    <SourceDirectory>.</SourceDirectory>
+    <Output>
+      <Output output="vBulletDemos" />
+    </Output>
+    <Build>
+      <Build target="Bin" />
+    </Build>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release</OutputPath>
+    <CodeGeneration>
+      <CodeGeneration WarningLevel="Normal" WarningsAsErrors="false" OptimizationLevel="3" ExtraCompilerArguments="" DefineSymbols="MONODEVELOP" EnableMultithreading="false" ctype="ValaCompilationParameters" />
+    </CodeGeneration>
+    <SourceDirectory>.</SourceDirectory>
+    <Output>
+      <Output output="vBulletDemos" />
+    </Output>
+    <Build>
+      <Build target="Bin" />
+    </Build>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="main.vala" />
+    <Compile Include="BulletDinoDemo\StackedArrays.vala" />
+    <Compile Include="BulletDinoDemo\Demo.vala" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BulletDinoDemo\" />
+    <Folder Include="BasicDemo\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="BasicDemo\BasicDemo.vala" />
+    <None Include="BasicDemo\BasicMain.vala" />
+  </ItemGroup>
+</Project>

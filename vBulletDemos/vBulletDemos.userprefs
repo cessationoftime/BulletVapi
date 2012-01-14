@@ -1,0 +1,48 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Demos/BulletDinoDemo/Demo.vala" ctype="Workbench">
+    <Files>
+      <File FileName="Demos/main.vala" Line="17" Column="47" />
+      <File FileName="Demos/BulletDinoDemo/StackedArrays.vala" Line="1" Column="1" />
+      <File FileName="Demos/BulletDinoDemo/Demo.vala" Line="151" Column="59" />
+      <File FileName="Demos/BasicDemo/BasicDemo.vala" Line="123" Column="40" />
+      <File FileName="Demos/BasicDemo/BasicMain.vala" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="vBulletDemos" expanded="True">
+            <Node name="Packages" expanded="True" />
+            <Node name="BasicDemo" expanded="True" />
+            <Node name="BulletDinoDemo" expanded="True">
+              <Node name="Demo.vala" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="ClassPad">
+        <State selected="True" />
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService>
+    <BreakpointStore>
+      <Breakpoint file="/home/cvanvranken/Projects/Valhalla/Valhalla/main.vala" line="962" />
+      <Breakpoint file="/home/cvanvranken/Projects/Valhalla/Valhalla/main.vala" line="1012" />
+      <Breakpoint file="/home/cvanvranken/Projects/Valhalla/Valhalla/main.vala" line="1084" />
+      <Breakpoint file="/home/cvanvranken/Projects/Valhalla/Valhalla/main.vala" line="1076" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" ctype="Workspace" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/home/cvanvranken/Projects/Valhalla/Valhalla/main.vala" line="962" />
+      <Breakpoint file="/home/cvanvranken/Projects/Valhalla/Valhalla/main.vala" line="1012" />
+      <Breakpoint file="/home/cvanvranken/Projects/Valhalla/Valhalla/main.vala" line="1084" />
+      <Breakpoint file="/home/cvanvranken/Projects/Valhalla/Valhalla/main.vala" line="1076" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches ctype="PinnedWatchStore" />
+</Properties>

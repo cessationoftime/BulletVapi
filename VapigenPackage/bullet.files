@@ -1,0 +1,5 @@
+/usr/local/include/bullet/Bullet-C-Api.h
+/usr/local/lib/libBulletCollision.a
+/usr/local/lib/libLinearMath.a
+/usr/local/lib/libBulletDynamics.a
+/usr/local/lib/libBulletSoftBody.a

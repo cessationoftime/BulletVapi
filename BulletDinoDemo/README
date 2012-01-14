@@ -1,0 +1,4 @@
+Add "BulletDinoDemo" to CMakeLists.txt in /bullet/Demos under "IF(BUILD_CPU_DEMOS) SET(SharedDemoSubdirs" and compile with CMAKE.
+Compiling may also require manipulation of the CMakeLists.txt in the BulletDinoDemo folder.  My working CMakeLists.txt from the BulletDinoDemo folder is included with this file and may help one to figure out what is needed.
+
+To compile BulletDinoDemo place BulletDino.c with the other BulletDemos in the bullet src folder, replacing the old BulletDino.c and compile with cmake.  make sure that the bullet-c-api.h and bullet-c-api.cpp have been replaced\updated in the bullet source as well.

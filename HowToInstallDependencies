@@ -1,0 +1,25 @@
+Compile Bullet:
+ cmake-gui
+ make -j4
+ sudo make install
+
+Libraries you will are likely to need:
+	sudo apt-get install libgtk2.0-dev  libgl1-mesa-dev mesa-common-dev libglu1-mesa-dev  libgtkglext1-dev glutg3-dev freeglut3-dev libglfw-dev libsdl1.2-dev libsdl-gfx1.2-dev libftgl-dev cmake
+
+Vapi files you WILL need:
+	download external openGL vapi files and add them to the vapi directory.
+	http://live.gnome.org/Vala/ExternalBindings
+
+
+
+Misc. Notes: 
+
+
+One can view the output of the compiler from within monodevelop, open the errors window and click the "Build Output" button.
+
+If one adds a new Package library and gets and Error "foo/bar.h file not found" one needs to install the actual development library on the PC using "sudo apt-get install xxx"
+
+If one adds a new Package library and gets an Error "undefined reference to a function" then one needs to use the appropriate -X compiler option to reference the needed library, for example: "-X -lglut".  One can add this compiler option to the monodevelop compiler options.  Project >> "Project Name" options >> Build>Code Generation > Extra Compiler Options
+
+
+

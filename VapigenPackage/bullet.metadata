@@ -1,0 +1,53 @@
+
+#specify the header file for all of the functions
+* cheader_filename="Bullet-C-Api.h"
+
+#hide the unused int in all of our handle classes
+*.unused hidden="1"
+
+
+#shape inheritance
+PlCollisionShape abstract="1"
+PlBoxShape base_class="PlCollisionShape"
+PlCapsuleShape base_class="PlCollisionShape"
+PlCompoundShape base_class="PlCollisionShape"
+PlConeShape base_class="PlCollisionShape"
+PlConvexHullShape base_class="PlCollisionShape"
+PlCylinderShape base_class="PlCollisionShape"
+
+
+#is_array is_ref="1"
+pl_rigidbody_GetOpenGLMatrix.matrix is_array="1" no_array_length="1"
+pl_rigidbody_SetOpenGLMatrix.matrix is_array="1" no_array_length="1"
+
+#is_value_type="1" simple_type="1" base_type="uint64" rank="11"
+PlReal is_fundamental="1" is_value_type="1" simple_type="1" base_type="float"
+#array_length = false
+
+#PlVector3 is_value_type="1" simple_type="1"
+#PlQuaternion is_value_type="1" simple_type="1"
+
+//Type:property_name
+#!!!!!!!!!!!!!!
+####### BUG, or warning should be added to code!  If you enter two lines for the same item, with different properties attached, either one or both of the
+# properties will fail to be attached! You MUST have all properties for a single item on one line
+
+##Class Names must start out uppercase in the typedef of the bullet.h file or they wont attach properly to the constructors (struct names can be lowercase
+
+#new and free function names must be lowercase and may contain underscores.  They must match the classname in lowercase except for being broken by uncerscores #and end with "_new" or "_free" for compact (non-gobject) classes and _unref _ref for GObject classes.  This is true for all functions, name must be all 
+#lowercase and the function name must be of the form "classname_functionname" though the classname prefix may be broken by underscores.
+
+#[CCode (has_construct_function=false)] sets a constructor visibility to private
+
+# warning: unable to chain up to private base constructor
+# Chain up to a class that has a public, non [CCode
+# (has_construct_function=false)] constructor.
+
+
+#plPhysicsSdk ref_function="plPhysicsSdkNew" unref_function="plDeletePhysicsSdk"
+
+#plPhysicsSdk free_function="plDeletePhysicsSdk"
+
+#!!!BUG!!! entering lowercase characters only into cprefix should generate a warning
+#!!BUG!! specify the cPrefix for the namespace, specifying cprefix fails, it has to be specified in the namespace file...
+#Bullet cprefix="Pl" lower_case_cprefix="pl_"

@@ -1,0 +1,34 @@
+Folder Structure
+
+Bullet-C-API : the Vala parser compatible Bullet-C-API.
+BulletDinoDemo : The original BulletDinoDemo, but revised to work with the new Bullet-C-API
+VapigenPackage : metadata, etc. for vala-gen-introspec and vapigen to parse the Bullet-C-API and properly generate bullet.vapi
+vBulletDemos : MonoDevelop Project containing a vala-based version of the BulletDinoDemo
+cmds : scripted commands for doing various tasks while building the bullet.vapi
+
+-----------------------------------------------------------------------------------------
+How to update the vapi file after modifying the Bullet-C-API (and recompiling bullet):
+	
+
+------------Prerequisites------------
+0)	Copy the revised Bullet-C-API to bullet, Compile and install bullet with the revised Bullet-C-API.
+1)	Make certain the files listed in "VapigenPackage/bullet.files" can actually be found at those locations.
+2)	Acquire the vala package and make sure "vala-gen-introspect" and "vapigen commands" were included with the package. 
+
+------------Run the following commands from the folder where this README resides----
+3)	"vala-gen-introspect bullet VapigenPackage"  (this parses the Bullet-C-API.h file and generates bullet.gi)
+4)	"vapigen --library bullet VapigenPackage/bullet.gi VapigenPackage/bullet-custom.vala" (this generates bullet.vapi)
+
+------------Using the new vapi file----
+5)	The bullet.vapi file is generated in the working directory, copy to the location containing the rest of vala's vapi files to use it.
+6)	Remember, while the name of the resulting package is bullet.vapi, it's namespace is "Pl".
+
+Note: I would not mind renaming the namespace to "Bullet", but I would like to do so without prefixing the word Bullet to every function\type in the Bullet-C-API (I'd rather just prefix with "pl", "bt", or "bullet" might conflict with cpp code).  Which means it needs to be renamed using metadata  or in the namespace file and so far I have not had any luck doing this though it should be possible.  This may be a bug in vala-ge-introspect\vapigen or it could just be me.
+
+-------------------------------------------------------------------------------------------------
+Working with valac and the API file
+
+1)If you have updated the APIs and your vala code is not working remember that you can view the resulting c code using the options -C or --ccode of valac
+
+	
+	
